@@ -12,8 +12,7 @@ body {
 	margin: 0;
   padding: 0;
 }
-	/* position:relative; */
-}
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -148,32 +147,37 @@ nav h1 a {
   padding: 30px 15px 60px;
   text-align: center;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* align-items: center; */
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 5px;
 }
 #restaurants-list li {
   background-color: #fff;
    border: 2px solid #ccc;
    font-family: Arial,sans-serif;
    margin: 10px;
-   min-height: 380px;
-   max-height: 380px;
-   padding: 0 30px 25px;
+   min-height: 400px;
+   max-height: 400px;
+   padding: 15px 15px;
    text-align: left;
    min-width: 270px;
    max-width: 270px;
 }
 #restaurants-list .restaurant-img {
-  background-color: #ccc;
-  display: block;
-  margin: 0;
+  /* background-color: #ccc;
+  text-align: center;
   max-width: 100%;
-  min-height: 248px;
   min-width: 100%;
+  display: flex;
 	flex: auto;
-  min-width: 270px;
+  justify-content: center;
+  */
+  min-height: 248px;
+  /* min-width: 280px; */
   max-width: 270px;
 
 }
@@ -294,4 +298,35 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+
+/* Design for Small Screens */
+
+@media screen and (min-width: 320px) and (max-width: 700px) {
+
+  #restaurants-list {
+    display: flex;
+    flex: auto;
+    justify-content: center;
+  }
+  #restaurants-list li {
+     min-width: 100%;
+     max-width: 100%;
+     flex: auto;
+  }
+
+  #restaurants-list .restaurant-img {
+
+
+  }
+  #restaurants-list li h1 {
+
+  }
+  #restaurants-list p {
+
+  }
+  #restaurants-list li a {
+
+  }
 }
