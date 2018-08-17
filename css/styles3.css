@@ -147,18 +147,11 @@ nav h1 a {
   list-style: none;
   padding: 30px 15px 60px;
   text-align: center;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  align-content: space-around;
-}
-/* Idea for this from: http://jeffbridgforth.com/aligning-last-child-in-flexbox-grid/ */
-#restaurants-list::after {
-    content:"";
-    display: block;
-    /* margin-left: 41.7%; */
-    margin-left: 708px;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -169,7 +162,6 @@ nav h1 a {
    max-height: 380px;
    padding: 0 30px 25px;
    text-align: left;
-   flex: auto;
    min-width: 270px;
    max-width: 270px;
 }
