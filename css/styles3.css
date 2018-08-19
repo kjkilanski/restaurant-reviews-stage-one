@@ -340,18 +340,17 @@ nav h1 a {
   }
 
   .inside #maincontent {
-    grid-template: none;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 100%;
     height: auto;
 
   }
 
   .inside #info-block {
     margin: 0;
-    min-height: 200px;
-    max-height: 200px;
+    height: auto;
     order: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 
   .inside #map-container {
