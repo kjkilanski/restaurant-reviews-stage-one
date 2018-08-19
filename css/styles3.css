@@ -340,23 +340,23 @@ nav h1 a {
   }
 
   .inside #maincontent {
-  grid-template-columns: 100%;
+    grid-template: none;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
   }
 
   .inside #info-block {
     margin: 0;
     min-height: 200px;
     max-height: 200px;
-    grid-column-start: 1;
-    grid-column-end: 1;
     order: 2;
   }
 
   .inside #map-container {
     padding: 0;
     margin: 0;
-    grid-column-start: 1;
-    grid-column-end: 1;
     order: 1;
     height: 325px;
   }
@@ -370,7 +370,7 @@ nav h1 a {
   #reviews-container {
     padding: 30px 40px 30px;
     order: 3;
-    height: 200px;
+    height: auto;
   }
 
   #reviews-list li p {
