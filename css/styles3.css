@@ -313,6 +313,7 @@ nav h1 a {
   margin: 0 0 10px;
   font-size: 12pt;
 }
+
 #reviews-list li p:first-child, p:nth-child(2), p:nth-child(3) {
  font-weight: 800;
 }
@@ -342,15 +343,16 @@ nav h1 a {
   .inside #maincontent {
     grid-template-columns: 100%;
     height: auto;
-
   }
 
   .inside #info-block {
     margin: 0;
-    height: auto;
+    /* height: auto; */
     order: 2;
     grid-column-start: 1;
     grid-column-end: 1;
+    min-height: 100%;
+    border-bottom: 2px solid #ddd;
   }
 
   .inside #map-container {
@@ -366,15 +368,75 @@ nav h1 a {
     height: 325px;
   }
 
+  #restaurant-container {
+    max-height: auto;
+    text-align: center;
+  }
+
+  #restaurant-container  .restaurant-img {
+    min-height: 200px;
+    max-height: 100px;
+    min-width: 95%;
+    max-width: 95%;
+    display: block;
+    margin: 10px auto;
+  }
+
+  #restaurant-name {
+    font-size: 14pt;
+    margin: 0 0 15px;
+  }
+
+  #restaurant-hours {
+    display: none;
+  }
+
+  #restaurant-cuisine {
+    margin: auto;
+    width: 95%;
+}
+
   #reviews-container {
-    padding: 30px 40px 30px;
+    padding: 0;
     order: 3;
     height: auto;
+    margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    width: 90%;
+  }
+
+  #reviews-container h2 {
+    font-size: 16pt;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  #reviews-list li {
+    max-height: auto;
+    padding: 10px 10px 10px;
   }
 
   #reviews-list li p {
-    font-size: 8pt;
+    font-size: 10pt;
   }
+
+  #reviews-list li p:first-child {
+   display: none;
+  }
+
+  #reviews-list li p:nth-child(2), li p:nth-child(3) {
+   display: inline;
+   margin-right: 10px;
+   padding-bottom: 20px;
+  }
+
+  #reviews-list li p:nth-child(4) {
+   margin-top: 10px;
+  }
+
   .leaflet-bottom.leaflet-right .leaflet-control-attribution {
     font-size: 0.7em;
   }
