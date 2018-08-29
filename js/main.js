@@ -206,7 +206,6 @@ if ('serviceWorker' in navigator) {
 }
 
 
-
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map

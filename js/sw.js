@@ -1,10 +1,10 @@
 var staticCacheName = 'restaurant-reviews-cache-v1';
 var urlsToCache = [
-  '/',
-  'img',
-  'js/main.js',
-  'js/restaurant_info.js',
-  'css/styles3.css',
+  '../',
+  '../img/',
+  'main.js',
+  'restaurant_info.js',
+  '../css/styles3.css',
   'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
 ];
 
@@ -12,7 +12,7 @@ self.addEventListener('install', function(event) {
 
   event.waitUntil(
     caches.open(staticCacheName).then(function(cache) {
-      concole.log('Opened cache');
+      console.log('Opened cache');
       return cache.addAll(urlsToCache);
     })
   );
@@ -50,7 +50,6 @@ self.addEventListener('fetch', function(event) {
               .then(function(cache) {
                 cache.put(event.request, responseToCache);
               });
-
             return response;
           }
         );
@@ -61,6 +60,7 @@ self.addEventListener('fetch', function(event) {
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
+      console.log('activate');
       return Promise.all(
         cacheNames.filter(function(cacheName) {
           return cacheName.startsWith('restaurant-') &&
