@@ -8,6 +8,7 @@ var urlsToCache = [
   'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
 ];
 
+// https://developers.google.com/web/fundamentals/primers/service-workers/
 self.addEventListener('install', function(event) {
 
   event.waitUntil(
@@ -18,6 +19,7 @@ self.addEventListener('install', function(event) {
   );
 });
 
+// https://developers.google.com/web/fundamentals/primers/service-workers/
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
@@ -26,6 +28,8 @@ self.addEventListener('fetch', function(event) {
         if (response) {
           return response;
         }
+
+// https://developers.google.com/web/fundamentals/primers/service-workers/
 
         // IMPORTANT: Clone the request. A request is a stream and
         // can only be consumed once. Since we are consuming this
